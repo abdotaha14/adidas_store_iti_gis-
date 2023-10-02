@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a class="logo" href="/index.html">Adidas</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/all pro.html">All Product</a></li>
+                <li><a href="/men.html">Men</a></li>
+                <li><a href="/women.html">Women</a></li>
+            </ul>
+            <div class="cart">
+                <a href="/card.html"><img src="/cart-white.png" class="cart-icon" alt=""></a>
+                <span style="color: white;" class="cart-item-count" id="cart-item-count1" >00</span>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h2>adidas egypt, <br> runing shose</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aliquam sapiente nesciunt nostrum quia maiores iusto.
+                </p>
+            </div>
+            <div class="image">
+                <img src="/shoes.png">
+            </div>
+
+        </div>
+
+        <div>
+            <a href=""><img src="" alt="facebook"></a>
+            <a href=""><img src="" alt="instagram"></a>
+            <a href=""><img src="" alt="youtube"></a>
+            <a href=""><img src="" alt="twitter"></a>
+
+        </div>
+
+    </div>
+<script src="/adidas.js"></script>
+<script src="/cart.js"></script>
+<script>
+    var totalitmes11=document.getElementById("cart-item-count1")
+    var totalitmes0 = 0
+    productsInLocalStorage.forEach((item) => {
+        totalitmes0 += item.numberofunits
+    })
+    totalitmes11.innerHTML=totalitmes0
+</script>
+</body>
+
+</html>
