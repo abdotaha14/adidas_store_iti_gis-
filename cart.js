@@ -51,8 +51,10 @@ function changenumberofunits(action, id) {
             }
         }
         return { ...item, numberofunits } ;
-        console.log(productsInLocalStorage)
-    })
+        
+    });
+    //set into local storage
+localStorage.setItem("products",JSON.stringify(productsInLocalStorage))
     updatecart()
 }
 
@@ -90,7 +92,7 @@ function rendersubtotal(){
             <a href=https://www.paypal.com/eg/home target="_blank"><button class="button"
                     onclick="">Checkout</button></a>
     `
-    totalitmes11.innerHTML=totalitmes0
+    totalitmes11.innerHTML=productsInLocalStorage.length
 }
 
 
