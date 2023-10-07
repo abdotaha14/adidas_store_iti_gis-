@@ -21,7 +21,9 @@ function getProducts() {
 
                 var div = document.getElementById("products")
                 div.innerHTML += `
-                <p class="item">${title + " price:" + price + "$"}<img src="${image0}" alt="adidas" class="img0"><button class="button" onclick="addcart(${id0})">add card</button></p>
+                <p class="item">${title + " price:" + price + "$"}
+                <img src="${image0}" alt="adidas" class="img0">
+                <button class="button" onclick="addcart(${id0})">add card</button></p>
                 `
 
             }
@@ -42,8 +44,9 @@ function addcart(id) {
     else {
 
         var item = products.find((product) => product.id === id);
-        cart.push({ ...item, numberofunits: 1, });
-        //check if localstorage has stored products
+        cart.push({ ...item, numberofunits: 1 });
+ 
+        //check if localstorage has stored products 
 
         if(productsInLocalStorage){
             productsInLocalStorage.push({ ...item, numberofunits: 1, });
@@ -51,9 +54,11 @@ function addcart(id) {
             localStorage.setItem('products',JSON.stringify(productsInLocalStorage))
         }else{
             //there isn't any product in cart 
-            let products = [{...item, numberofunits:1}];
-            localStorage.setItem('products',JSON.stringify(products))
+            productsInLocalStorage = [{...item, numberofunits:1}];
+            localStorage.setItem('products',JSON.stringify(productsInLocalStorage))
         }
+        var itemincart = document.getElementById("cart-item-count1")
+        itemincart.innerHTML=productsInLocalStorage.length
     }
    
 }
