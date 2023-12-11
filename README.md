@@ -1,5 +1,5 @@
-﻿# adidas_store_iti_gis-
-
+﻿# adidas_store (Simple E-commerce website)
+ 
 It is the first website that I developed during ITI GIS Journey study. 
 It is a simple store specializing in shoes, enabling the user to add products to the cart and increase the quantity as he wants.
 
